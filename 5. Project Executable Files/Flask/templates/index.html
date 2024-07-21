@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content = 'width=device-width,initial-scale=1.0'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKD Prediction</title>
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chronic Kidney Disease Prediction System</h1>
+        <div class="form-container">
+            <form action="/predict" method="POST">
+                    <div class="forms ">
+                        <input type="text" name="Age" placeholder="Age" required="required">
+                        <input type="text" name="bp" placeholder="Blood Pressure" required="required">
+                        <input type="text" name="bu" placeholder="Blood Urea" required="required">
+                        <input type="text" name="sc" placeholder="Serum Creatinine" required="required">
+                        <input type="text" name="sod" placeholder="Sodium" required="required">
+                        <input type="text" name="pot" placeholder="Potassium" required="required">
+                        <input type="text" name="hemo" placeholder="Hemoglobin" required="required">
+                        <input type="text" name="wc" placeholder="White Blood Cell Count" required="required">
+                        <input type="text" name="rc" placeholder="Red Blood Cell Count" required="required">
+                        <input type="text" name="bgr" placeholder="Blood Glucose Random" required="required">
+                        <select name="al" required="required">
+                            <option value="">Albumin</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <select name="su" required="required">
+                            <option value="">Sugar</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <select name="sg" required="required">
+                            <option value="">Specific Gravity</option>
+                            <option value="0">0.0</option>
+                            <option value="1">1.0</option>
+                            <option value="2">2.0</option>
+                            <option value="3">3.0</option>
+                            <option value="4">4.0</option>
+                            <option value="5">5.0</option>
+                        </select>
+                        <select name="rbc" required="required">
+                            <option value="">Red Blood Cells</option>
+                            <option value="normal">Normal</option>
+                            <option value="abnormal">Abnormal</option>
+                        </select>
+                        <select name="pc" required="required">
+                            <option value="">Pus Cell</option>
+                            <option value="normal">Normal</option>
+                            <option value="abnormal">Abnormal</option>
+                        </select>
+                        <select name="pcc" required="required">
+                            <option value="">Pus Cell Clumps</option>
+                            <option value="normal">Not Present</option>
+                            <option value="abnormal">Present</option>
+                        </select>
+                        <select name="ba" required="required">
+                            <option value="">Bacteria</option>
+                            <option value="present">Present</option>
+                            <option value="notpresent">Not Present</option>
+                        </select>
+                        <select name="htn" required="required">
+                            <option value="">Hypertension</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <select name="dm" required="required">
+                            <option value="">Diabetes Mellitus</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <select name="cad" required="required">
+                            <option value="">Coronary Artery Disease</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <select name="appet" required="required">
+                            <option value="">Appetite</option>
+                            <option value="good">Good</option>
+                            <option value="poor">Poor</option>
+                        </select>
+                        <select name="pe" required="required">
+                            <option value="">Peda Edema</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <select name="ane" required="required" style="margin-left:12.5vw">
+                            <option value="">Anemia</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Predict</button>
+                    </div>
+                    <strong><p class="Disclaimer">Disclaimer: Please do not put complete trust in the predicted diagnosis.Kindly consult a doctor(Nephrologist) to get a proper diagnosis</p></strong>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
